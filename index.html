@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Art Across India: an interactive map exploring India's regional art traditions.">
+  <title>Indian Art Form | Interactive Art Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Indian Art Form home">
+      <span class="brand-mark" aria-hidden="true">✺</span>
+      <span><strong>Indian Art Form</strong><small>Interactive Art Map</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="active" href="#home">Home</a>
+      <a href="#map-section">Interactive Map</a>
+      <a href="#styles">Art Styles</a>
+      <a href="#about">About</a>
+      <label class="nav-search"><span class="sr-only">Search art, place, or artist</span><input id="nav-search" type="search" placeholder="Search art or location..." autocomplete="off"><span aria-hidden="true">⌕</span></label>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-art hero-art-left" aria-hidden="true"></div><div class="hero-art hero-art-right" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="eyebrow">A living catalogue of Indian heritage</p>
+        <h1>Indian <em>Art Form</em></h1>
+        <p class="hero-copy">Trace the colours, stories and skilled hands that shaped India's cultural landscape.</p>
+        <a class="button button-primary" href="#map-section">Explore the map <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-stamp" aria-hidden="true"><span>भारत</span><small>HERITAGE<br>IN MOTION</small></div>
+    </section>
+
+    <section class="feature-strip" aria-label="Art categories">
+      <article class="feature-item"><span class="feature-icon">◈</span><div><h2>Folk Art</h2><p>Stories carried through everyday hands.</p></div></article>
+      <article class="feature-item"><span class="feature-icon">♢</span><div><h2>Classical Art</h2><p>Timeless forms shaped by tradition.</p></div></article>
+      <article class="feature-item"><span class="feature-icon">✣</span><div><h2>Tribal Art</h2><p>Living voices of indigenous communities.</p></div></article>
+      <article class="feature-item"><span class="feature-icon">✺</span><div><h2>Regional Diversity</h2><p>One country, a thousand visual languages.</p></div></article>
+    </section>
+
+    <section class="map-section page-section" id="map-section">
+      <div class="section-heading"><div><p class="eyebrow">01 / Explore by place</p><h2>India is the <em>canvas</em></h2></div><p class="section-intro">Select a state on the illustrated map to discover the art forms, makers and memories rooted there.</p></div>
+      <div class="map-layout">
+        <aside class="map-controls" aria-label="Map controls">
+          <div class="control-block"><label for="map-search">Search the collection</label><div class="input-wrap"><input id="map-search" type="search" placeholder="Place, style or artist..." autocomplete="off"><span aria-hidden="true">⌕</span></div><div id="search-results" class="search-results" role="listbox" aria-label="Search results"></div></div>
+          <div class="control-block"><span class="control-label">Filter by category</span><div class="filter-list" role="group" aria-label="Filter by category"><button class="filter-button active" data-filter="All">All <span>10</span></button><button class="filter-button" data-filter="Folk Art">Folk Art <span>5</span></button><button class="filter-button" data-filter="Classical Art">Classical Art <span>3</span></button><button class="filter-button" data-filter="Tribal Art">Tribal Art <span>1</span></button><button class="filter-button" data-filter="Painting">Painting <span>10</span></button></div></div>
+          <div class="map-note"><span>✦</span><p><strong>How to explore</strong><br>Click a labelled state or choose an artwork below to open its story.</p></div>
+        </aside>
+        <div class="map-frame"><div class="india-map" role="img" aria-label="Illustrated map of India with clickable states"><img class="india-map-image" src="https://commons.wikimedia.org/wiki/Special:FilePath/India_states_and_union_territories_map.svg" alt="Map of the states and union territories of India" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/India_map_2.jpg'"><button class="state-pin pin-kashmir" data-id="kashmir">Jammu &amp; Kashmir</button><button class="state-pin pin-rajasthan" data-id="rajasthan">Rajasthan</button><button class="state-pin pin-mp" data-id="gond">Madhya Pradesh</button><button class="state-pin pin-bihar" data-id="madhubani">Bihar</button><button class="state-pin pin-west-bengal" data-id="kalighat">West Bengal</button><button class="state-pin pin-maharashtra" data-id="warli">Maharashtra</button><button class="state-pin pin-odisha" data-id="pattachitra">Odisha</button><button class="state-pin pin-andhra" data-id="kalamkari">Andhra Pradesh</button><button class="state-pin pin-tamil" data-id="tanjore">Tamil Nadu</button><button class="state-pin pin-kerala" data-id="kerala">Kerala</button><div class="map-caption">INDIA<br><small>ARTS &amp; CRAFTS</small></div></div></div>
+      </div>
+    </section>
+
+    <section class="styles-section page-section" id="styles">
+      <div class="section-heading"><div><p class="eyebrow">02 / The visual lexicon</p><h2>Art styles of <em>India</em></h2></div><p class="section-intro">From mineral pigments to gold leaf, every style holds the fingerprint of a place.</p></div>
+      <div id="style-grid" class="style-grid"></div>
+    </section>
+
+    <section class="about-section page-section" id="about">
+      <div class="about-intro"><p class="eyebrow">03 / Context & continuity</p><h2>Art is how a place <em>remembers.</em></h2><p>Indian art is not a single story. It is a constellation of practices shaped by geography, devotion, royal courts, community rituals and the materials found close to home.</p></div>
+      <div class="about-grid"><article><span>01</span><h3>Ancient Heritage</h3><p>From cave murals to temple sculpture, early artists made belief visible with earth, stone and natural pigment.</p></article><article><span>02</span><h3>Regional Diversity</h3><p>Monsoon, coastline, forest and desert each leave a distinctive mark on line, colour and subject.</p></article><article><span>03</span><h3>Folk & Tribal Traditions</h3><p>Communities pass visual knowledge through ceremony, seasonal storytelling and generations of makers.</p></article><article><span>04</span><h3>Classical Traditions</h3><p>Workshops, temples and royal ateliers refined techniques while keeping their cultural roots alive.</p></article></div>
+      <div class="timeline" aria-label="Indian art timeline"><div><span>Ancient</span><small>c. 2500 BCE</small></div><i></i><div><span>Medieval</span><small>600–1500</small></div><i></i><div><span>Early Modern</span><small>1500–1800</small></div><i></i><div><span>Modern</span><small>1800–today</small></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark" aria-hidden="true">✺</span><div><strong>Indian Art Form</strong><p>An interactive exploration of India's artistic heritage.</p></div></div><div class="footer-links"><a href="#home">Home</a><a href="#map-section">Interactive Map</a><a href="#styles">Art Styles</a><a href="#about">About</a></div><p class="academic-note">Created as a university academic project<br><span>Interactive Art Map · 2026</span></p></footer>
+
+  <div class="detail-overlay" id="detail-overlay" aria-hidden="true"><button class="overlay-close" type="button" aria-label="Close art detail">×</button><article class="detail-panel" id="detail-panel"></article></div>
+  <script src="script.js"></script>
+</body>
+</html>
